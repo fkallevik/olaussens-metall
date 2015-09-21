@@ -1,0 +1,24 @@
+//
+// Buttons
+// _buttons.scss
+// Created on 15.9.2015.
+//
+// @author Fredrik Kallevik <fredrik@idrift.no>
+// @copyright 2012 - 2015 iDrift Web AS
+// @version 1.0.0
+
+.btn {
+	height: 50px;
+	line-height: 40px;
+	color: white;
+	text-transform: uppercase;
+	background-color: $brand-primary;
+	margin-top: $spacer-y;
+
+	&:hover {
+		background-color: $link-hover-color;
+	}
+}
+
+// End of file _buttons.scss 
+// Location: ./content/themes/olaussensmetall/styles/partials/_buttons.scss 

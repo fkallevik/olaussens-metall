@@ -1,0 +1,33 @@
+//
+// Responsive styles
+// _responsive.scss
+// Created on 11.9.2015.
+//
+// @author Fredrik Kallevik <fredrik@idrift.no>
+// @copyright 2012 - 2015 iDrift Web AS
+// @version 1.0.0
+
+/* ==========================================================================
+   Mobile
+   ========================================================================== */
+
+@media screen and (max-width: $xs) {
+	
+	.header {
+		
+		.nav-main { display: none; }
+		
+		.toggle-mobile-nav {
+			height: 38px;
+			display: block;
+			float: right;
+			font-size: 24px;
+			line-height: 50px;
+			color: $brand-primary;
+		}
+	}
+	
+}
+
+// End of file _responsive.scss 
+// Location: ./content/themes/olaussensmetall/styles/partials/_responsive.scss 

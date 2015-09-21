@@ -1,0 +1,381 @@
+//
+// Theme styles
+// _styles.scss
+// Created on 7.9.2015.
+//
+// @author Fredrik Kallevik <fredrik@idrift.no>
+// @copyright 2012 - 2015 iDrift Web AS
+// @version 1.0.0
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+$header-height: 103px;
+
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+
+	padding: 25px;
+	background: $gray-lightest;
+	border-bottom: 2px solid $gray-lighter;
+
+	> .container { @include clearfix; }
+
+	.logo-main {
+		margin-top: 10px;
+		float: left;
+		> a {
+			@include text-hide;
+			width: 174px;
+			height: 51px;
+			display: block;
+			background-size: 174px 51px;
+			background: url("assets/logo.png") no-repeat center top;
+			transition: all 150ms;
+		}
+	}
+
+	.nav-main {
+		margin-top: 15px; // Changed from 30px
+		//margin-bottom: 30px;
+
+		float: right;
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		a { display: block; }
+
+		> ul {
+			@include clearfix;
+
+			> li {
+				float: left;
+				margin: 0 9px;
+
+				&:first-child { margin-left: 0; }
+				&:last-child { margin-right: 0; }
+
+				> a {
+					font: normal 14px/20px $font-family-base;
+					color: $gray-dark;
+				}
+
+			}
+
+		}
+	}
+
+	.toggle-mobile-nav { display: none; }
+}
+
+/* ==========================================================================
+   Mmenu overriding the looks
+   ========================================================================== */
+.mm-menu .mm-list {
+	padding-top: $header-height + 20px;
+}
+
+
+.mm-menu .mm-list > li:after {
+	border-color: $gray-lighter;
+}
+
+#nav-mobile { background: $gray-lightest; }
+#nav-mobile a { color: $brand-primary; }
+#nav-mobile a:hover { color: $brand-secondary; }
+
+/* ==========================================================================
+/*  Wrappers
+	========================================================================== */
+
+.page-wrapper {
+	padding-top: (3 * $spacer-y);
+	margin-top: $header-height;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $brand-primary;
+	}
+}
+
+.front-page-wrapper {
+	margin-top: $header-height;
+}
+
+/* ==========================================================================
+   Slideshow
+   ========================================================================== */
+
+.flex-container {
+	margin-top: 40px;
+}
+
+.slideshow-main {
+	position: relative;
+
+	.slides {
+
+		img {
+			@include img-responsive;
+			z-index: -1;
+		}
+
+		li {
+			position: relative;
+		}
+
+		a, p {
+			color: white;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+	}
+
+	.slide-content-container {
+		width: 100%;
+		position: absolute;
+		.slide-content {
+			width: 100%;
+			position: absolute;
+			left: 0;
+			bottom: $spacer-y;
+
+			.slide-title {
+				padding-left: $spacer-x;
+				height: 100%;
+				color: white;
+				@media screen and (max-width: 480px) {
+					font-size: 18px;
+				}
+			}
+
+			.slide-text-container {
+				background: rgba($brand-primary, 0.7);
+				height: 60px;
+				left: 0;
+				width: 100%;
+				@media screen and (max-width: 350px) {
+					display: none;
+				}
+			}
+
+			.slide-text {
+				@include vertical-align();
+
+				padding: $spacer-x;
+				@media screen and (max-width: 720px) {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	.flex-direction-nav {
+		*height: 0;
+
+		li {
+			position: absolute;
+			top: 0;
+
+			&.flex-nav-prev { left: 0; }
+			&.flex-nav-next { right: 0; }
+
+		}
+
+		a {
+			width: 3rem;
+			height: 3rem;
+			display: block;
+			font-size: 1.5rem;
+			text-align: center;
+			text-decoration: none !important;
+			line-height: 3rem;
+			color: white;
+
+			&:hover { background: $brand-primary; }
+
+			@media screen and (max-width: 480px) {
+				display: none;
+			}
+
+		}
+
+	}
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.front-page-wrapper .footer {
+	margin-top: 0;
+}
+
+.footer {
+	margin-top: (3 * $spacer-y);
+	padding-top: $spacer-y;
+	padding-bottom: 32px;
+	background: $brand-primary;
+	text-align: center;
+	color: white;
+	font: normal 14px/30px $font-family-base;
+
+	h5 {
+		margin-top: (2 * $spacer-y);
+	}
+}
+
+.footer-icon {
+	margin-top: $spacer-y;
+	display: inline-block;
+	margin-left: $spacer-x;
+	font-size: 48px;
+	line-height: 60px;
+	text-decoration: none !important;
+	color: white;
+}
+
+.footer-icon a:hover {
+	color: red;
+}
+
+.certification-wrapper {
+	margin: 0 auto;
+	margin-top: $spacer;
+	width: 370px;
+	height: 105px;
+	max-width: 100%;
+
+	.certified {
+		width: 206px;
+		height: 82px;
+		display: block;
+		background-size: 206px 82px;
+		background-image: url("assets/certified.png");
+
+		@include vertical-align();
+	}
+
+	.achilles{
+		width: 131px;
+		height: 105px;
+		display: block;
+		background-size: 131px 105px;
+		background-image: url("assets/achilles.png");
+
+		@include vertical-align();
+	}
+}
+
+/* ==========================================================================
+   Featured Products
+   ========================================================================== */
+
+.featured-products-container {
+	margin-top: $spacer-y;
+
+	text-align: center;
+
+	img {
+		@include img-responsive;
+	}
+}
+
+.featured-product {
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+.featured-products-container img {
+	margin: 0 auto;
+}
+
+.featured-product-title {
+	text-transform: uppercase;
+}
+
+.featured-product-content {
+	padding: $spacer-x;
+}
+
+/* Rush Order */
+.rush_order {
+	color: #be2917;
+}
+
+.rush_order:hover {
+	color: $brand-secondary;
+}
+
+/* ==========================================================================
+/*  Front Page Employees list
+	========================================================================== */
+
+.employee-list-wrapper {
+	text-align: center;
+	margin-top: (2 * $spacer-y);
+}
+
+.employee-item {
+	margin-top: (2 * $spacer-y);
+	height: 300px;
+}
+
+.employee-name {
+	color: $brand-secondary;
+}
+
+.employee-title {
+	color: $brand-primary;
+	display: block;
+	height: 40px;
+}
+
+.employee-contact-phone {
+	color: $gray-light;
+}
+
+.employee-contact-email {
+	color: $brand-primary;
+}
+
+/* ==========================================================================
+/*  Google Maps
+	========================================================================== */
+.gmap {
+	width: 100%;
+	height: 500px;
+	position: relative;
+	margin-top: (3 * $spacer-y);
+	border-top: 1px solid $gray-lighter;
+}
+
+/* ==========================================================================
+/*  Contact Us
+	========================================================================== */
+#gform_submit_button_1 {
+	width: 100%;
+}
+
+/* ==========================================================================
+/*  Bootstrap Overrides
+	========================================================================== */
+.no-padding {
+	padding: 0;
+}
+
+.form-control {
+  border: 1px solid $gray-light;
+}
+
+// End of file _styles.scss
+// Location: ./content/themes/olaussensmetall/styles/partials/_styles.scss
