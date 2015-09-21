@@ -1,7 +1,7 @@
 {
-  "name": "shopify-basic",
+  "name": "basic-shopify",
   "version": "1.0.0",
-  "description": "Shopify Basic Theme",
+  "description": "Basic Shopify Theme",
   "main": "Gruntfile.js",
   "author": "Fredrik Kallevik <fredrik@idrift.no>",
   "repository" : {
