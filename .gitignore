@@ -1,0 +1,8 @@
+# Vendor
+vendor/
+
+# Nodejs
+node_modules/
+.sass-cache
+*.css.map
+assets/theme.css

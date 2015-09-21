@@ -25,7 +25,8 @@
 
   {{ content_for_header }}
 
-  {{ 'style.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
+
   {{ 'social/social-icons.css' | global_asset_url | stylesheet_tag }}
   {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' | stylesheet_tag }}
   
