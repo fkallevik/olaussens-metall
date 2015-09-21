@@ -30,7 +30,7 @@
 
 // // Components
 // @import "../vendor/bootstrap/scss/animation";
-// @import "../vendor/bootstrap/scss/dropdown";
+@import "../vendor/bootstrap/scss/dropdown";
 // @import "../vendor/bootstrap/scss/button-group";
 // @import "../vendor/bootstrap/scss/input-group";
 // @import "../vendor/bootstrap/scss/custom-forms";
@@ -80,6 +80,9 @@
 @import "partials/style";
 @import "partials/buttons";
 @import "partials/responsive";
+
+// Shopify Specific
+@import "partials/shopify"
 
 
 // End of file theme.scss 

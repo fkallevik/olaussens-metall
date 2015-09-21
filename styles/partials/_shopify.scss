@@ -1,0 +1,23 @@
+/* PRODUCT PAGE */
+
+.product-photos {
+	img {
+		@include img-responsive;
+	}
+}
+
+.product-photo-thumb {
+	list-style: none;
+}
+
+@media (max-width: $xs) {
+  .two-per-row.product-photo-thumb {
+    width: 50% !important;
+    float: left !important;
+  }  
+}
+
+.two-per-row {
+	@extend .col-md-6;
+}
+

@@ -9,7 +9,7 @@
   
   <form action="/cart/add" method="post" enctype="multipart/form-data">
     
-    <div class="product-photos">
+    <div class="product-photos col-md-6">
   
     {% if product.images.size == 0 %}
   
@@ -27,7 +27,7 @@
       </div>
 
       {% if product.images.size > 1 %}
-      <ul class="product-photo-thumbs clearfix grid">
+      <ul class="product-photo-thumbs">
         {% for image in product.images %}
         <li class="product-photo-thumb two-per-row">
           <a href="{{ image | img_url: '1024x1024' }}">
@@ -42,7 +42,7 @@
 
     </div><!-- .product-photos -->
     
-    <div class="product-details">
+    <div class="product-details col-md-6">
       
       <h1 itemprop="name">{{ product.title }}</h1>
       
@@ -57,7 +57,7 @@
       {% else %}
         {% assign vendor_url = product.vendor | url_for_vendor %}
       {% endif %}
-      <h2 itemprop="brand" class="delta">{{ product.vendor | link_to: vendor_url }}</h2>
+      <h3 itemprop="brand" class="delta">{{ product.vendor | link_to: vendor_url }}</h3>
       
       <div id="product-description" class="rte" itemprop="description">
         {{ product.description }}
@@ -93,7 +93,7 @@
       {% endif %}       
 
       <div id="product-variants" class="{% if hide_default_title %} hidden{% endif %}">
-        <select id="product-select" name="id">
+        <select id="product-select dropdown-menu dropdown-item" name="id">
         {% for variant in product.variants %}
           <option{% if variant == product.selected_or_first_available_variant %} selected{% endif %} value="{{ variant.id }}">
           {{ variant.title }} - {{ variant.price | money }}
@@ -107,7 +107,7 @@
       </div>
         
       <div id="product-add">
-        <input type="submit" name="add" id="add" class="primary button" value="{{ add_to_cart | escape }}">
+        <input type="submit" name="add" id="add" class="btn" value="{{ add_to_cart | escape }}">
       </div>
       
       {% if collection %}
