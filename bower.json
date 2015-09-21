@@ -1,0 +1,27 @@
+{
+  "name": "basic-shopify",
+  "version": "1.0.0",
+  "authors": [
+    "Fredrik Kallevik <fredrik@idrift.no>"
+  ],
+  "description": "Basic Shopify Theme",
+  "main": "assets/styles/theme.scss",
+  "keywords": [
+    "basic-shopify",
+    "iDrift Web AS"
+  ],
+  "homepage": "http://",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies" : {
+    "bootstrap": "4.0.0-alpha",
+    "font-awesome": "4.4.0"
+  }
+}
