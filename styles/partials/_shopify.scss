@@ -103,6 +103,7 @@ i, em { font-style: italic; }
 b, strong { font-weight: 600; }
 .small-print { @extend .zeta; }
 
+/**
 a {
   color: $link-color;
   text-decoration: none;
@@ -117,6 +118,7 @@ a {
     color: darken( $text-color, 10% );
   }
 }
+**/
 
 section, #customer { @extend .section-margins; }
 p, form > div { @extend .paragraph-margins; }
@@ -263,10 +265,9 @@ input[type="submit"], input[type="button"], button {
   padding: .5em .7em;
   font-size: 1.2rem;
   background-color: $link-color;
-  border-color: $link-color;  
   color: $background-color;
   &:hover {
-    background-color: darken( $link-color, 10% );
+    background-color: $brand-secondary;
   }
 }
 
