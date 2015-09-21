@@ -1,0 +1,15 @@
+---
+:api_key: 772cb8ebdec3dec3e2cb2de7198b6e68
+:password: 52e70324994f582527a05d86987c5ff5
+:store: basic-19.myshopify.com
+:theme_id: 
+:whitelist_files:
+- layout/
+- assets/
+- config/
+- snippets/
+- templates/
+- locales/
+:ignore_files:
+#- config/settings_data.json
+
