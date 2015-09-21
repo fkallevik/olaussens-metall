@@ -424,7 +424,7 @@ table {
    6. Navigation
    =================== */
 
-/* Main navigation with drop-down menu support */
+/* Main navigation with drop-down menu support 
 
 @media (max-width: $breakpoint-small-screen) {
   nav.left {
@@ -475,7 +475,7 @@ nav ul {
     }
   }
 }
-
+*/
 /* CSS triangle at the top of drop-down menus. */
 nav ul ul li:first-child a:after {
   content: '';
