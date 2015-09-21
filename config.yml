@@ -12,5 +12,5 @@
 - locales/
 :ignore_files:
 - assets/styles
-#- config/settings_data.json
+- config/settings_data.json
 
