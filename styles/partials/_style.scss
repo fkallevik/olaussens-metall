@@ -34,8 +34,6 @@ $header-height: 103px;
 			width: 174px;
 			height: 51px;
 			display: block;
-			background-size: 174px 51px;
-			background: url("assets/logo.png") no-repeat center top;
 			transition: all 150ms;
 		}
 	}
@@ -259,9 +257,6 @@ $header-height: 103px;
 		width: 206px;
 		height: 82px;
 		display: block;
-		background-size: 206px 82px;
-		background-image: url("assets/certified.png");
-
 		@include vertical-align();
 	}
 
@@ -269,9 +264,6 @@ $header-height: 103px;
 		width: 131px;
 		height: 105px;
 		display: block;
-		background-size: 131px 105px;
-		background-image: url("assets/achilles.png");
-
 		@include vertical-align();
 	}
 }

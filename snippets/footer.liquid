@@ -1,25 +1,42 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h5>Postadresse</h5>
+        {{ shop.name }} AS<br>
+        Postboks 1704, Raglamyr<br>
+        5505 Haugesund, Norway
+      </div>
+      <div class="col-md-3">
+        <h5>Besøksadresse</h5>
+        Ørpetveitvegen 310<br>
+        5542 Karmsund
+      </div>
+      <div class="col-md-3">
+        <h5>Kontaktinfo</h5>
+        Tel: +47 52 84 50 40<br>
+        E-post: post@bronze.no
+      </div>
+      <div>
+        <a href="#" class="footer-icon"><i class="fa fa-facebook-official"></i></a>
+        <a href="#" class="footer-icon"><i class="fa fa-linkedin-square"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 <footer>
 
-  {% if linklists.footer.links.size > 0 %}
-  <p role="navigation">
-  {% for link in linklists.footer.links %}
-    <a href="{{ link.url }}" title="{{ link.title }}"{% if link.active %} class="active"{% endif %}>{{ link.title }}</a>
-  {% endfor %}
-  </p>
-  {% endif %}
-  
-  {% unless shop.enabled_payment_types == empty %}
-<div class="payment-types">
-    {% for type in shop.enabled_payment_types %}
-    <img width="40" src="{{ type | payment_type_img_url }}" />
-    {% endfor %}
+  <div class="row row-centered certification-wrapper">
+    <div class="col-xs-5 col-xs-offset-1 center-block certified">
+      {{ 'certified.png' | asset_url | img_tag: 'Achilles'}}
+    </div>
+    <div class="col-xs-6 center-block achilles">
+      {{ 'achilles.png' | asset_url | img_tag: 'Achilles'}}
+    </div>
   </div>
-  {% endunless %}
 
-  <div class="social-links half column left-aligned">
-  {% include 'social-links' %}
-  </div>
+
+
   
-  <p role="contentinfo" class="small-print">Copyright &copy; {{ "now" | date: "%Y" }} {{ shop.name }}. {{ powered_by_link }}.</p>
-
 </footer>
