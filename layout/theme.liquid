@@ -38,7 +38,7 @@
 
   {{ 'jquery-1.11.0.min.js' | asset_url | script_tag }}
   {{ 'modernizr-2.7.1.min.js' | asset_url | script_tag }}
-  
+
   {{ 'common.min.js' | asset_url | script_tag }}
 
 
@@ -68,9 +68,6 @@
     {% include 'header' %}
 
     <div class="container page-wrapper">
-      <div class="row">
-        {% include 'subheader' %}
-      </div>
       {% comment %}}
         We have a template file to render.
         That's what content_for_layout is for.

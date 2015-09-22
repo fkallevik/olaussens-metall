@@ -106,109 +106,6 @@ $header-height: 103px;
 }
 
 /* ==========================================================================
-   Slideshow
-   ========================================================================== */
-
-.flex-container {
-	margin-top: 40px;
-}
-
-.slideshow-main {
-	position: relative;
-
-	.slides {
-
-		img {
-			@include img-responsive;
-			z-index: -1;
-		}
-
-		li {
-			position: relative;
-		}
-
-		a, p {
-			color: white;
-		}
-
-		a:hover {
-			text-decoration: none;
-		}
-	}
-
-	.slide-content-container {
-		width: 100%;
-		position: absolute;
-		.slide-content {
-			width: 100%;
-			position: absolute;
-			left: 0;
-			bottom: $spacer-y;
-
-			.slide-title {
-				padding-left: $spacer-x;
-				height: 100%;
-				color: white;
-				@media screen and (max-width: 480px) {
-					font-size: 18px;
-				}
-			}
-
-			.slide-text-container {
-				background: rgba($brand-primary, 0.7);
-				height: 60px;
-				left: 0;
-				width: 100%;
-				@media screen and (max-width: 350px) {
-					display: none;
-				}
-			}
-
-			.slide-text {
-				@include vertical-align();
-
-				padding: $spacer-x;
-				@media screen and (max-width: 720px) {
-					font-size: 12px;
-				}
-			}
-		}
-	}
-
-	.flex-direction-nav {
-		*height: 0;
-
-		li {
-			position: absolute;
-			top: 0;
-
-			&.flex-nav-prev { left: 0; }
-			&.flex-nav-next { right: 0; }
-
-		}
-
-		a {
-			width: 3rem;
-			height: 3rem;
-			display: block;
-			font-size: 1.5rem;
-			text-align: center;
-			text-decoration: none !important;
-			line-height: 3rem;
-			color: white;
-
-			&:hover { background: $brand-primary; }
-
-			@media screen and (max-width: 480px) {
-				display: none;
-			}
-
-		}
-
-	}
-}
-
-/* ==========================================================================
    Footer
    ========================================================================== */
 
@@ -263,94 +160,13 @@ $header-height: 103px;
 }
 
 /* ==========================================================================
-   Featured Products
-   ========================================================================== */
-
-.featured-products-container {
-	margin-top: $spacer-y;
-
-	text-align: center;
-
-	img {
-		@include img-responsive;
-	}
-}
-
-.featured-product {
-	padding-left: 1px;
-	padding-right: 1px;
-}
-
-.featured-products-container img {
-	margin: 0 auto;
-}
-
-.featured-product-title {
-	text-transform: uppercase;
-}
-
-.featured-product-content {
-	padding: $spacer-x;
-}
-
-/* Rush Order */
-.rush_order {
-	color: #be2917;
-}
-
-.rush_order:hover {
-	color: $brand-secondary;
-}
-
-/* ==========================================================================
-/*  Front Page Employees list
+/*  Shopify
 	========================================================================== */
-
-.employee-list-wrapper {
-	text-align: center;
-	margin-top: (2 * $spacer-y);
+.search-form {
+	transform: translateY(-50%);
 }
 
-.employee-item {
-	margin-top: (2 * $spacer-y);
-	height: 300px;
-}
 
-.employee-name {
-	color: $brand-secondary;
-}
-
-.employee-title {
-	color: $brand-primary;
-	display: block;
-	height: 40px;
-}
-
-.employee-contact-phone {
-	color: $gray-light;
-}
-
-.employee-contact-email {
-	color: $brand-primary;
-}
-
-/* ==========================================================================
-/*  Google Maps
-	========================================================================== */
-.gmap {
-	width: 100%;
-	height: 500px;
-	position: relative;
-	margin-top: (3 * $spacer-y);
-	border-top: 1px solid $gray-lighter;
-}
-
-/* ==========================================================================
-/*  Contact Us
-	========================================================================== */
-#gform_submit_button_1 {
-	width: 100%;
-}
 
 /* ==========================================================================
 /*  Bootstrap Overrides

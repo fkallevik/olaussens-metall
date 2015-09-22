@@ -74,16 +74,13 @@
 @import "../vendor/font-awesome/scss/stacked";
 @import "../vendor/font-awesome/scss/icons";
 
-
+// Shopify Skeleton Theme CSS
+@import "partials/shopify";
 
 // Theme
 @import "partials/style";
 @import "partials/buttons";
 @import "partials/responsive";
-
-// Shopify Specific
-@import "partials/shopify"
-
 
 // End of file theme.scss 
 // Location: /Users/fredrik/shopify-basic/assets/scss/theme.scss 
