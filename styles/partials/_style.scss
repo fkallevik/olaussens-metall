@@ -166,6 +166,17 @@ $header-height: 103px;
 	transform: translateY(-50%);
 }
 
+.product-price {
+	@extend h3;
+}
+
+#product-description {
+	margin-bottom: $spacer-y;
+}
+
+.section-margins, section, #customer, ul, ol, table, .product-details > div, .product-details > p {
+	margin: 0 0 $spacer-y;
+}
 
 
 /* ==========================================================================
