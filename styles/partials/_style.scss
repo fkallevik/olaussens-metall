@@ -31,16 +31,18 @@ $header-height: 103px;
 		float: left;
 		> a {
 			@include text-hide;
-			width: 174px;
+			width: 350px;
 			height: 51px;
 			display: block;
+			background-size: 350px 51px;
+			background: url("logo-netthandel.png") no-repeat center top;
 			transition: all 150ms;
 		}
 	}
 
 	.nav-main {
-		margin-top: 15px; // Changed from 30px
-		//margin-bottom: 30px;
+		margin-top: 30px; // Changed from 30px
+		margin-bottom: 30px;
 
 		float: right;
 		ul {
