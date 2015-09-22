@@ -14,13 +14,6 @@ selectors inside search.css.
 
 <div id="searchresults">
   
-  <div class="centered">
-    <form action="/search" method="get" class="search-form" role="search">
-      <input name="q" type="search" id="search-field" placeholder="Search store..." value="{{ search.terms | escape }}" />
-      <input type="submit" id="search-submit" value="Search" />
-    </form>
-  </div>
-  
   {% comment %}
   search.performed is false when accessing the /search page without a 'q' parameter set
   in the URL. A shop-owner can link to the /search page from one of his link lists.
